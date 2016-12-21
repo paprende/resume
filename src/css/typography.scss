@@ -1,0 +1,20 @@
+$font-stack: 'Quicksand', sans-serif;
+$font-dark: #141414;
+$font-light: #fff;
+$background-color-light: #fff;
+$background-color-blue: #1565C0;
+
+html {
+  font: 100% $font-stack;
+  font-weight: 300;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: $font-light;
+  background-color: #178CD8;
+  // color: $font-light;
+  // background-color: $background-color-blue;
+}
