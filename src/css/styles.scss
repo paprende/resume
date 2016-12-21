@@ -76,6 +76,10 @@ $icon-color: #fff;
       &.fa-graduation-cap {
         left: -0.188rem;
       }
+
+      &.fa-university {
+        left: -0.1rem;
+      }
     }
 
     span {
@@ -107,26 +111,32 @@ $icon-color: #fff;
     padding-top: 8px;
   }
 
-  .decorator {
+  .decorator,
+  .decorator--no-dot {
     position: relative;
     flex: 0 0 0;
     min-height: 100%;
     @include timeline-border();
+  }
 
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      border-radius: 100%;
-    }
+  .decorator--no-dot:before {
+    content: "";
+  }
 
-    &::after {
-      top: 0.550rem;
-      left: -0.31rem;
-      height: 0.550rem;
-      width: 0.550rem;
-      background-color: $icon-color;
-    }
+
+  .decorator::after,
+  .decorator::before {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+  }
+
+  .decorator::after {
+    top: 0.550rem;
+    left: -0.31rem;
+    height: 0.550rem;
+    width: 0.550rem;
+    background-color: $icon-color;
   }
 
   .details {
@@ -180,4 +190,8 @@ li:before {
   .title + .subtitle {
     margin-bottom: 1.2rem;
   }
+}
+
+p + p {
+  margin-top: 0 !important;
 }
